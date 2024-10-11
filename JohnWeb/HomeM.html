@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volvo Heritage Models</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #313131;
+        color: #000000;
+        overflow-x: hidden;
+      }
+
+      .wrapper {
+        width: 100%;
+        padding: 0;
+      }
+
+      .main-content {
+        position: relative;
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        height: 100vh;
+        overflow: hidden;
+        width: 100vw;
+      }
+
+      .main-content video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .main-content h1 {
+        position: absolute;
+        top: 23%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 48px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-top: 5%;
+      }
+
+      .main-content h2 {
+        position: absolute;
+        top: 32%; /* Adjust this value to position the h2 below h1 */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        font-weight: normal;
+        text-transform: none;
+        letter-spacing: 1px;
+        margin-top: 8%;
+      }
+
+      .main-links {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 5%;
+      }
+
+      .main-links a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 22px;
+        white-space: nowrap;
+        padding: 3px 20px; /* Adds padding to make it look like a button */
+        background-color: transparent; /* Transparent background */
+        border: 2px solid #ffffff; /* White border */
+        border-radius: 5px; /* Optional: Adds rounded corners */
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .main-links a:hover {
+        background-color: #ffffff; /* Changes background to white on hover */
+        color: #313131; /* Changes text color to match the background */
+      }
+
+      @media (max-width: 600px) {
+        .main-content h1 {
+          font-size: 28px;
+          letter-spacing: 2px;
+          top: 25%;
+        }
+
+        .main-content h2 {
+          font-size: 14px;
+          top: 35%;
+        }
+
+        .main-links {
+          top: 50%;
+        }
+
+        .main-links a {
+          font-size: 18px;
+        }
+      }
+
+      @media (min-width: 600px) and (max-width: 1024px) {
+        .main-content h1 {
+          font-size: 36px;
+          letter-spacing: 3px;
+        }
+
+        .main-content h2 {
+          font-size: 18px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .main-content h1 {
+          font-size: 48px;
+          letter-spacing: 5px;
+        }
+
+        .main-content h2 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>  
+    <div class="wrapper">
+      <div class="main-content">
+        <video autoplay muted loop>
+          <source src="images/vid.mp4" type="video/mp4" />
+        </video>
+        <h1>What is a Car?</h1>
+        <h2>
+          A four-wheeled road vehicle that is powered by an engine and is able
+          to carry a small number of people.
+        </h2>
+        <div class="main-links" style="font-size: 200px;">
+          <a href="HomeP.html">Cars</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

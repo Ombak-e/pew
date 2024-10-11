@@ -1,0 +1,287 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Car Showcase</title>
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("images/bg.jpg"); /* Path to your background image */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative; /* Allow absolute positioning for the back link */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+        }
+
+        .car-wrapper {
+            max-width: 1300px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) ); /* Responsive grid */
+            gap: 20px;
+        }
+
+        .car-item {
+            background-color: #faebd7;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.8s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }   
+
+        .car-item:hover {
+            transform: scale(1.05);
+        }
+
+        .car-item img {
+            width: 100%;
+            height: auto; /* Auto height for responsive images */
+            
+            display: block;
+        }
+
+        .car-item h3 {  
+            font-size: 20px;
+            margin: 10px 0;
+            padding: 0 15px;
+            color: #333;
+        }
+
+        .car-item p {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            padding: 0 15px;
+        }   
+
+        .car-item details {
+            margin: 15px;
+            text-align: left;
+            border-top: 1px solid #070707;  
+            padding-top: 10px;          
+            overflow: hidden; /* Hide overflow content */
+            transition: max-height 0.8s ease; /* Smooth expansion */
+            
+        }
+
+        .car-item details[open] {
+            max-height: 200 px; /* Expanded height when open */           
+        }
+
+        .car-item details summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #014979;
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        .car-item details summary:hover {
+            color: #ff5733; /* Change color on hover */
+        }
+
+        
+
+        /* Back link styles */
+        .back-link {    
+            position: absolute; /* Position it absolutely */
+            top: 25px; /* Distance from the top */
+            left: 20px; /* Distance from the left */
+            text-decoration: none; /* Remove underline */
+            color: #000000; /* Link color */
+            font-size: 20px; /* Font size */
+            margin-left: 90%;
+            font-family: sans-serif;
+            
+        }
+
+        
+
+        @media (max-width: 600px) {
+            h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            }
+
+            .car-item img {
+            height: 150px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="car-wrapper">
+        <a href="HomeM.html" class="back-link">HOME</a>
+        <!-- Back link -->
+        <h1>Explore the Classic Car Models</h1>
+        <div class="car-grid">
+            <div class="car-item">
+            <img
+                src="images/Ferrari F355.jfif"
+                alt="Ferrari F355"
+                style="height: 170px"
+            />
+            <h3>Ferrari F355</h3>
+            <p>1994 - 1999</p>
+            <details>
+                <summary>See More</summary>
+                <p>
+                The Ferrari F355, produced from 1994 to 1999, is known for its
+                stunning design and exceptional performance. It features a
+                3.5-liter V8 engine and is celebrated as one of the best sports
+                cars of its time.
+                </p>
+            </details>
+            </div>
+            <div class="car-item">
+            <img src="images/f50.jpg" alt="Ferrari F50" style="height: 170px" />
+            <h3>Ferrari F50</h3>
+            <p>1995 - 1997</p>
+            <details>
+                <summary>See More</summary>
+                <p>
+                The Ferrari F50, produced from 1995 to 1997, is a limited-edition
+                supercar featuring a 4.7-liter V12 engine and a lightweight carbon
+                fiber chassis, providing incredible speed and agility.
+                </p>
+            </details>
+            </div>
+            <div class="car-item">
+            <img
+                src="images/McLaren F1.jpg"
+                alt="McLaren F1"
+                style="height: 170px"
+            />
+            <h3>McLaren F1</h3>
+            <p>1992 - 1999</p>
+            <details>
+                <summary>See More</summary>
+                <p>
+                The McLaren F1, produced between 1992 and 1999, is one of the most
+                iconic supercars, known for its unique three-seat layout and a
+                powerful BMW-sourced V12 engine, making it a true masterpiece.
+                </p>
+            </details>
+            </div>
+            <div class="car-item">
+            <img
+                src="images/Honda NSX.jpg"
+                alt="Honda NSX"
+                style="height: 170px"
+            />
+            <h3>Honda NSX</h3>
+            <p>1984 - 1995</p>
+            <details>
+                <summary>See More</summary>
+                <p>
+                The Honda NSX, produced from 1984 to 1995, was revolutionary for
+                its time, offering a lightweight aluminum body, mid-engine layout,
+                and exceptional handling, making it a benchmark for Japanese
+                sports cars.
+                </p>
+            </details>
+            </div>
+            <div class="car-item">
+            <img
+                src="images/Dodge Viper.jpg"
+                alt="Dodge Viper"
+                style="height: 170px"
+            />
+            <h3>Dodge Viper</h3>
+            <p>1982 - 1999</p>
+            <details>
+                <summary>See More</summary>
+                <p>
+                The Dodge Viper, produced from 1982 to 1999, is known for its raw
+                power and aggressive styling. With a V10 engine and a lightweight
+                design, it became a symbol of American muscle.
+                </p>
+            </details>
+            </div>
+            <div class="car-item">
+            <img
+                src="images/ferrari f40.jpg"
+                alt="Ferrari F40"
+                style="height: 170px"
+            />
+            <h3>Ferrari F40</h3>
+            <p>1983 - 1998</p>
+            <details>
+                <summary>See More</summary>
+                <p>
+                The Ferrari F40, manufactured between 1983 and 1998, is an iconic
+                supercar with a lightweight carbon fiber body and a twin-turbo V8
+                engine, celebrated for its performance and raw driving experience.
+                </p>
+            </details>
+            </div>
+            <div class="car-item">
+            <img
+                src="images/Lamborghini Countach.jpg"
+                alt="Lamborghini Countach"
+                
+            />
+            <h3>Lamborghini Countach</h3>
+            <p>1981 - 1999</p>
+            <details>
+                <summary>See More</summary>
+                <p>
+                The Lamborghini Countach, produced from 1974 to 1999, is an iconic
+                supercar known for its radical design and powerful V12 engine. It
+                set the standard for Lamborghini's exotic car design and became a
+                symbol of 1980s excess and luxury.
+                </p>
+            </details>
+            </div>
+            <div class="car-item">
+            <img
+                src="images/Lamborghini Diab.jpg"
+                alt="Lamborghini Diablo"
+                style="height: 170px"
+            />
+            <h3>Lamborghini Diablo</h3>
+            <p>1985 - 1998</p>
+            <details>
+                <summary>See More</summary>
+                <p>
+                The Lamborghini Diablo, produced between 1985 and 1998, was one of
+                the fastest cars of its time. It featured a massive V12 engine and
+                aggressive styling that made it a true exotic supercar.
+                </p>
+            </details>
+            </div>
+        </div>
+        </div>
+    </body>
+    </html>
